@@ -47,6 +47,28 @@ class MyHomePage extends StatelessWidget {
               elevation: 5,
             ),
           ),
+          Card(
+            elevation: 5,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: <Widget>[
+                    TextField(decoration: InputDecoration(labelText: 'Title')),
+                    TextField(decoration: InputDecoration(labelText: 'Amount')),
+                    TextButton(
+                      child: Text('Add Transaction'),
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.purple,
+                        textStyle: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      onPressed: () {},
+                    )
+                  ]),
+            ),
+          ),
           Column(
             children: transactions.map((tx) {
               return Card(
